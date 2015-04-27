@@ -6,8 +6,21 @@
 <%= form_tag(launchpad_path) do %>
   <fieldset>
     <p>
-      <%= label_tag :image_name %>
-      <%= text_field_tag :image_name, 'ami-746c7731', required: true %>
+      <%= label_tag :image_id, 'Image Id' %>
+      <%= text_field_tag :image_id, 'ami-746c7731', required: true %>
+    </p>
+    <p>
+      <%= label_tag :tags, 'Instance Name' %>
+      <%= text_field_tag :tags, 'Bitnami-WordPress' %>
+    </p>
+    <p>
+      <%= label_tag :flavor_id, 'Flavor Id' %>
+      <!-- <%= text_field_tag :flavor_id, 'm3.medium' %> -->
+      <%= select_tag :flavor_id, options_for_select(@flavor_options) %>
+    </p>
+    <p>
+      <%= label_tag :groups, 'Security Groups' %>
+      <%= text_field_tag :groups, 'default', required: true %>
     </p>
     <p>
       <%= submit_tag 'Launch' %>

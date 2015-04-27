@@ -2,17 +2,22 @@
 <h1>Ec2 instance status</h1>
 </header>
 
-<% if session[:instance_id] %>
+<% if @instance_id %>
 <p>
-  <%= link_to "Link to Bitnami WordPress server", "http://#{session[:dns_name]}" %>
+  <%= link_to "Link to Bitnami WordPress server", "http://#{@dns_name}" %>
 </p>
 <p>
   <%= link_to 'Terminate server', launchpad_path, method: :delete %>
 </p>
+<% else %>
+<p> <%= "Wait for machine to be booted ..." %> </p>
 <% end %>
 <p>
 
 </p>
 
 <footer>
+  <p>
+    <%= link_to 'Refresh', launchpad_show_path %>
+  </p>
 </footer>
