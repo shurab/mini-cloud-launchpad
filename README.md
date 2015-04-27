@@ -38,8 +38,8 @@ Open another terminal in project directory and check that redis server up and ru
 redis-cli ping
 bundle exec sidekiq
 ```
-The last step is to open in your browser URL http://localhost:3000/
+The last step is to open in your browser app URL: http://localhost:3000/
 
-Before launching server on Amanon make sure your ~/.ec2 file has valid AWS credentials, and selected security group includes inbound HTTP port 80.
+Before launching server on Amanon make sure that your ~/.ec2 file has valid AWS credentials, and selected security group includes inbound HTTP port 80.
 
 In my tests launching Bitnami Wrd Press server usually takes about 2 - 3 mins.
