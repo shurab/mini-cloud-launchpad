@@ -1,0 +1,18 @@
+<header>
+<h1>Ec2 instance status</h1>
+</header>
+
+<% if session[:instance_id] %>
+<p>
+  <%= link_to "Link to Bitnami WordPress server", "http://#{session[:dns_name]}" %>
+</p>
+<p>
+  <%= link_to 'Terminate server', launchpad_path, method: :delete %>
+</p>
+<% end %>
+<p>
+
+</p>
+
+<footer>
+</footer>

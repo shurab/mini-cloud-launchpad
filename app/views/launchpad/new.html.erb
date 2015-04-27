@@ -1,0 +1,16 @@
+<h1>Launch Bitnami WordPad server</h1>
+<% if flash[:notice] %>
+  <p class="flash notice"><%= flash[:notice] %></p>
+<% end %>
+
+<%= form_tag(launchpad_path) do %>
+  <fieldset>
+    <p>
+      <%= label_tag :image_name %>
+      <%= text_field_tag :image_name, 'ami-746c7731', required: true %>
+    </p>
+    <p>
+      <%= submit_tag 'Launch' %>
+    </p>
+  </fieldset>
+<% end %>
